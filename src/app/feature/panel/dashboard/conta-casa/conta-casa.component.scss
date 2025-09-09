@@ -1,0 +1,83 @@
+.row{
+    background-color: #F0F5F4;
+    border: solid 1.5px #C7E0E0;
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+
+    .collumn{
+        flex: none;
+        display: flex;
+
+        &.collumn-descricao{
+            flex: 1 0 0;
+        }
+        &.collumn-number input{
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: right;
+        }
+
+        &>input, &>select {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            border: solid 1.5px #C7E0E0;
+            border-radius: 5px;
+        }
+        &:last-child{
+            margin-right: -10px;
+            button{
+                padding: 5px;
+                background-color: #C7E0E0;
+            }
+        }
+    }
+    &:first-child{
+        border-radius: 5px 5px 0 0;  
+    }
+    &:last-child{
+        border-radius: 0 0 0 5px;  
+    }
+}
+#add-conta{
+    display: table;
+    margin: 0 0 0 auto;
+    font-weight: 600;
+    background-color: #C7E0E0;
+    border-radius: 0 0 10px 10px;
+}
+#salvar-conta{
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #1A2828;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
+.result-mes{
+    border-radius: 5px 5px 0 0;
+    background-color: #F0F5F4;
+    border: solid 1.5px #DCDCDC;
+    display: flex;
+    padding: 10px 5px 15px;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    
+    &>div{
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        flex: 1 0 0;
+        &>span:first-child{ font-weight: 800; padding-bottom: 10px; display: block; }
+        &>span:last-child{ font-size: 2.5em; }
+    }
+}

@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div id="dashboard">
+    <div id="contas">
+        <div class="abas">
+            <button [ngClass]="{'active': index==1}" (click)="index = 1">Casa</button>
+            <button [ngClass]="{'active': index==2}" (click)="index = 2">Vitor</button>
+            <button [ngClass]="{'active': index==3}" (click)="index = 3">Marconis</button>
+        </div>
+        <div *ngIf="index==1">
+            <app-conta-casa></app-conta-casa>
+        </div>
+        <div *ngIf="index==2"></div>
+        <div *ngIf="index==3"></div>
+    </div>
+    <div id="parcelas">
+    </div>
+</div>

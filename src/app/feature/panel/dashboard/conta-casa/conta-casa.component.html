@@ -1,0 +1,51 @@
+<div *ngIf="contaCasa$ | async as contaCasa">
+    <form [formGroup]="formMes">
+        <div formArrayName="content">
+            <!-- <h2>Contas da Casa | {{formMes.value.mes}} de {{formMes.value   .ano}}</h2> -->
+            <div *ngFor="let g of contentFA.controls; let i = index; trackBy: trackByControl" [formGroupName]="i" class="row">
+                    <div class="collumn">
+                        <select formControlName="pagante">
+                            <option value="1">Vitor</option>
+                            <option value="2">Marconis</option>
+                        </select>
+                    </div>
+                    <div class="collumn collumn-descricao">
+                        <input placeholder="Descrição" type="text" formControlName="nome" />
+                    </div>
+                    <div class="collumn">
+                        <input type="date" formControlName="data" />
+                    </div>
+                    <div class="collumn collumn-number">
+                        <input type="number" formControlName="valor" />
+                    </div>
+                    <div class="collumn">
+                        <button type="button" (click)="removeConta(i)">X</button>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!formMes.value?.content?.length">
+                <span>Não há contas nesse mês</span>
+            </div>
+    </form>
+    <button id="add-conta" (click)="addConta()">+ Nova Conta</button>
+
+    <div class="result-mes">
+        <div>
+            <span>Total</span><span>{{totalCasa.toFixed(2)}}</span>
+        </div>
+        <div>
+            <span>Vitor</span><span>{{totalVitor.toFixed(2)}}</span>
+        </div>
+        <div>
+            <span>Marconis</span><span>{{totalMarconis.toFixed(2)}}</span>
+        </div>
+        <div>
+            <span *ngIf="totalVitor >= totalMarconis">Maronis - Vitor</span>
+            <span *ngIf="totalMarconis >= totalVitor">Vitor - Maronis</span>
+            <span>{{totalDiferenca.toFixed(2)}}</span>
+        </div>
+    </div>
+    <div>
+        <button id="salvar-conta" (click)="editarTabelas()">Salvar Mês</button>
+    </div>
+</div>

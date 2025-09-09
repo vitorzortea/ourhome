@@ -1,0 +1,50 @@
+:host{
+    background-image: linear-gradient(to bottom, #f0f5f5, #fff);
+    display: block;
+    width: 100%;
+    min-height: 100dvh;
+    overflow: auto;
+
+    app-header{
+        display: flex;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    #dashboard{
+        width: 100%;
+        display: flex;
+        padding: 5px;
+        gap: 5px;
+        align-items: stretch;
+
+        &>div{
+            display: block;
+            background-color: white;
+            padding: 20px;
+        }
+    }
+
+    .abas{
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        border: solid 1.5px #C7E0E0;
+        background-color: #f0f5f5;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        gap: 5px;
+        padding: 4px 10px;
+
+        button{
+            padding: 10px 20px;
+            opacity: 0.5;
+            font-weight: 600;
+            &.active{
+                background: white;
+                border: solid 1.5px #C7E0E0;
+                opacity: 1;
+            }
+        }
+    }
+}

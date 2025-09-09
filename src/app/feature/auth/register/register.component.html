@@ -1,0 +1,9 @@
+
+  <h1>Criar conta</h1>
+  <form (ngSubmit)="register()">
+    <input [(ngModel)]="displayName" name="displayName" placeholder="nome" />
+    <input [(ngModel)]="email" name="email" type="email" placeholder="email" required />
+    <input [(ngModel)]="password" name="password" type="password" placeholder="senha" required />
+    <button type="submit">Registrar</button>
+  </form>
+  <p *ngIf="error()">{{ error() }}</p>
