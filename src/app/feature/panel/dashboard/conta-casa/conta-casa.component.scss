@@ -24,8 +24,8 @@
         &>input, &>select {
             width: 100%;
             padding: 10px;
-            background-color: white;
-            border: solid 1.5px #C7E0E0;
+            background-color: var(--lt-color-white);
+            border: solid 1.5px var(--lt-color-gray-300);
             border-radius: 5px;
         }
         &:last-child{
