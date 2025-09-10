@@ -4,10 +4,17 @@
             <!-- <h2>Contas da Casa | {{formMes.value.mes}} de {{formMes.value   .ano}}</h2> -->
             <div *ngFor="let g of contentFA.controls; let i = index; trackBy: trackByControl" [formGroupName]="i" class="row">
                     <div class="collumn">
-                        <select formControlName="pagante">
-                            <option value="1">Vitor</option>
-                            <option value="2">Marconis</option>
-                        </select>
+                        <label class="pagante">
+                            @if(formMes.value.content?.[i]?.pagante == 1){ 
+                                <img src="/img/1.png" alt="Pagante" />
+                            }@else {
+                                <img src="/img/2.png" alt="Pagante" />
+                            }
+                            <select formControlName="pagante">
+                                <option value="1">Vitor</option>
+                                <option value="2">Marconis</option>
+                            </select>
+                        </label>
                     </div>
                     <div class="collumn collumn-descricao">
                         <input placeholder="Descrição" type="text" formControlName="nome" />
@@ -16,7 +23,7 @@
                         <input type="date" formControlName="data" />
                     </div>
                     <div class="collumn collumn-number">
-                        <input type="number" formControlName="valor" />
+                        <input type="number" formControlName="valor" (change)="changeValue(i)" min="0" />
                     </div>
                     <div class="collumn">
                         <button type="button" (click)="removeConta(i)">X</button>

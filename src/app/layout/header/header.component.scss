@@ -1,12 +1,14 @@
 header{
     z-index: 2;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     position: relative;
     background-color: white;
     border: solid 1.5px #DCDCDC;
     justify-content: flex-start;
+    box-shadow: 2px 2px rgba(0,0,0,0.2);
 }
 img{
     position: relative;
@@ -24,9 +26,10 @@ input{
     width: auto;
     text-transform: uppercase;
     padding: 10px;
-    background-image: linear-gradient(to bottom, #f0f5f5, #fff);
+    background-image: linear-gradient(to left, #f0f5f5, #fff);
     border: solid 1.5px #6ABADF;
     border-left: none;
     border-radius: 0 10px 10px 0;
     font-size: 1.2em;
+    z-index: 2;
 }

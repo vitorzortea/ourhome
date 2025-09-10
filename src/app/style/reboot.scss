@@ -6,7 +6,7 @@
 $font-family-sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
-$brand-h: 358;//220;
+$brand-h: 199;//220;
 $radius: 1rem;
 $radiusxl: 65rem;
 $border-w: 1px;
@@ -95,16 +95,30 @@ $font-scale: (
 
   /* Sombra sutil */
   --shadow-1: 0 1px 2px rgba(0,0,0,.06), 0 1px 1px rgba(0,0,0,.03);
+
+  
+  --color-bg: hsl(40, 10%, 94%);
+  --color-bg-elev: hsl(0 0% 100%);
+  --color-bg-demote: hsl(168, 20%, 95%);
+  --color-text: hsl(0, 0%, 13%);
+  --color-muted: hsl(40, 10%, 94%);
+  --color-border: hsl(0, 0%, 86%);
+  --color-focus: hsl(var(--brand-h) 80% 58% / .6);
+  --color-primary: hsl(var(--brand-h) 70% 49%);
+  --color-primary-contrast: hsl(0 0% 100%);
+  --color-link: hsl(var(--brand-h) 82% 42%);
+  --color-link-visited: hsl(199, 70%, 49%);
 }
 
 [data-theme="dark"] {
-  --color-bg: hsl(220 18% 10%);
-  --color-bg-elev: hsl(220 16% 14%);
+  --color-bg: hsl(220, 18%, 10%);
+  --color-bg-elev: hsl(220, 18%, 10%);
+  --color-bg-demote: hsl(180, 2%, 12%);
   --color-text: hsl(220 14% 96%);
   --color-muted: hsl(220 10% 70%);
-  --color-border: hsl(220 14% 26%);
-  --color-focus: hsl(var(--brand-h) 92% 65% / .6);
-  --color-primary: hsl(var(--brand-h) 90% 65%);
+  --color-border: hsl(180, 1%, 28%);
+  --color-focus: hsl(var(--brand-h) 90% 69% / .6);
+  --color-primary: hsl(var(--brand-h) 80% 59%);
   --color-primary-contrast: hsl(220 18% 10%);
   --color-link: hsl(var(--brand-h) 85% 70%);
   --color-link-visited: hsl(272 70% 70%);

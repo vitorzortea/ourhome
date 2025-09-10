@@ -1,15 +1,18 @@
 .row{
-    background-color: #F0F5F4;
-    border: solid 1.5px #C7E0E0;
+    background-color:  var(--color-bg-demote);
+    border: solid 1.5px var(--color-border);
     display: flex;
+    flex-wrap: wrap;
     padding: 5px;
     gap: 5px;
     align-items: center;
     width: 100%;
-
+    
     .collumn{
         flex: none;
         display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
 
         &.collumn-descricao{
             flex: 1 0 0;
@@ -21,18 +24,35 @@
             text-align: right;
         }
 
-        &>input, &>select {
+        input, select {
             width: 100%;
             padding: 10px;
-            background-color: var(--lt-color-white);
-            border: solid 1.5px var(--lt-color-gray-300);
+            background-color: var(--color-bg-elev);
+            border: solid 1.5px var(--color-border);
             border-radius: 5px;
         }
         &:last-child{
             margin-right: -10px;
             button{
                 padding: 5px;
-                background-color: #C7E0E0;
+                background-color: var(--color-border);
+                &:hover{
+                    background-color: var(--color-primary);
+                    color: white;
+                }
+            }
+        }
+        .pagante{
+            position: relative;
+            &>img{
+                width: 40px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border-radius: 5px 0 0 5px;
+            }
+            &>select{
+                padding-left: 45px;
             }
         }
     }
@@ -41,29 +61,39 @@
     }
     &:last-child{
         border-radius: 0 0 0 5px;  
+        border-bottom-width: 5px;
     }
 }
 #add-conta{
     display: table;
     margin: 0 0 0 auto;
     font-weight: 600;
-    background-color: #C7E0E0;
+    background-color: var(--color-border);
     border-radius: 0 0 10px 10px;
+    &:hover{
+        background-color: var(--color-primary);
+        color: white;
+    }
 }
 #salvar-conta{
     display: block;
     width: 100%;
     font-weight: 600;
     text-transform: uppercase;
-    background-color: #1A2828;
-    color: white;
+    background-color: var(--color-text);
+    color: var(--color-bg-elev);
     border-radius: 0 0 10px 10px;
+    &:hover{
+        background-color: var(--color-primary);
+        color: white;
+    }
 }
 .result-mes{
     border-radius: 5px 5px 0 0;
-    background-color: #F0F5F4;
-    border: solid 1.5px #DCDCDC;
+    background-color: var(--color-bg-demote);
+    border: solid 1.5px var(--color-border);
     display: flex;
+    flex-wrap: wrap;
     padding: 10px 5px 15px;
     gap: 5px;
     align-items: center;

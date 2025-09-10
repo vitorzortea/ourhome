@@ -110,15 +110,25 @@ export class ContaCasaComponent {
   };
 
   addConta(){ this.formMes.controls.content.push(this.makeItem()); }
-  removeConta(index: number): void {
+
+  removeConta(i: number): void {
     const fa = this.formMes.controls.content;
-    if (index < 0 || index >= fa.length) {
-      console.warn('Index inválido:', index);
-      return;
-    }
-    fa.removeAt(index, { emitEvent: true });
+    if (i < 0 || i >= fa.length) return;
+    fa.removeAt(i, { emitEvent: true });
     fa.markAsDirty();
     fa.updateValueAndValidity({ onlySelf: false, emitEvent: true });
+  }
+
+  changeValue(i:number){
+    const fa = this.formMes.controls.content;
+    if (i < 0 || i >= fa.length) return;
+    const ctrl = fa.at(i).get('valor') as FormControl<number | string | null>;
+    let value = ctrl.value;
+    value = (Number(value)<0) ? (-1 * Number(value)).toFixed(2) : Number(value).toFixed(2);
+    
+    ctrl.setValue(value as any, { emitEvent: true });
+    ctrl.markAsDirty();
+    ctrl.updateValueAndValidity({ emitEvent: false });
   }
   
   editarTabelas() {
