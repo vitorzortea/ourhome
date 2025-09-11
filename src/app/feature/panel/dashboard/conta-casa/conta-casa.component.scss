@@ -111,3 +111,51 @@
         &>span:last-child{ font-size: 2.5em; }
     }
 }
+
+@media (max-width: 720px) {
+    .row{
+        padding: 10px 2px;
+        position: relative;
+        .collumn{
+            width: 100%;
+            .pagante{
+                width: 100%;
+            }
+            &:nth-child(1){
+                order: 2;
+                width: 49%;
+            }
+            &:nth-child(2){
+                order: 1;
+                width: 100%;
+                flex: none;
+                margin-top: 35px;
+                input{
+                    text-align: center;
+                }
+            }
+            &:nth-child(3){
+                order: 3;
+                width: 49%;
+            }
+            &:nth-child(4){
+                order: 4;
+                font-size: 1.5em;
+                &.collumn-number input{
+                    text-align: center;
+                }
+            }
+            &:last-child{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: fit-content;
+                button{
+                    border-radius: 50% 0 0 50%;
+                    font-size: 1.2em;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}

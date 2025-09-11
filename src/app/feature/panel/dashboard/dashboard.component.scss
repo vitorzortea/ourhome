@@ -60,3 +60,15 @@
         }
     }
 }
+@media (max-width: 720px) {
+    :host{
+        app-header{
+            margin-bottom: 10px;
+        }
+        
+        #dashboard>div{
+            width: 100%;
+        }
+    }
+
+}

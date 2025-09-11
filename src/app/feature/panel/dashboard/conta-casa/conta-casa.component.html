@@ -23,7 +23,13 @@
                         <input type="date" formControlName="data" />
                     </div>
                     <div class="collumn collumn-number">
-                        <input type="number" formControlName="valor" (change)="changeValue(i)" min="0" />
+                        <input 
+                            brlCurrency
+                            inputmode="numeric"
+                            autocomplete="off"
+                            formControlName="valor"
+                            (change)="changeValue(i)"
+                        />
                     </div>
                     <div class="collumn">
                         <button type="button" (click)="removeConta(i)">X</button>
@@ -38,18 +44,18 @@
 
     <div class="result-mes">
         <div>
-            <span>Total</span><span>{{totalCasa.toFixed(2)}}</span>
+            <span>Total</span><span>{{totalCasa}}</span>
         </div>
         <div>
-            <span>Vitor</span><span>{{totalVitor.toFixed(2)}}</span>
+            <span>Vitor</span><span>{{totalVitor}}</span>
         </div>
         <div>
-            <span>Marconis</span><span>{{totalMarconis.toFixed(2)}}</span>
+            <span>Marconis</span><span>{{totalMarconis}}</span>
         </div>
         <div>
             <span *ngIf="totalVitor >= totalMarconis">Maronis - Vitor</span>
             <span *ngIf="totalMarconis >= totalVitor">Vitor - Maronis</span>
-            <span>{{totalDiferenca.toFixed(2)}}</span>
+            <span>{{totalDiferenca}}</span>
         </div>
     </div>
     <div>

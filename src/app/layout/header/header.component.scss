@@ -33,3 +33,28 @@ input{
     font-size: 1.2em;
     z-index: 2;
 }
+
+@media (max-width: 720px) {
+    header{
+        justify-content: center;
+    }
+    img{
+        max-width: 100px;
+        padding: 0px;
+        margin: 0px;
+        border-radius: 0px;
+        margin-bottom: 0px;
+        background-color: none;
+        box-shadow: none;
+    }
+    input{
+        width: 100%;
+        padding: 12px;
+        background-image: linear-gradient(to bottom, #f0f5f5, #fff);
+        border: solid 1.5px #6ABADF;
+        border-radius: 0;
+        font-size: 1.4em;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
